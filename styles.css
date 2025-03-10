@@ -1,0 +1,540 @@
+/*CSS RESET*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+/*   border: 1px solid red; */
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* NAV */
+
+#header{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.topbar {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ' . logo  navlinks';
+  background-color: white;
+  position: sticky;
+  padding-top: 25px;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  grid-area: logo;
+  margin: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#nav-bar {
+  grid-area: navlinks;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+/* END NAVBAR */
+
+
+/* MAIN-CONTAINER */
+.container {
+  width: 90vw;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header-image {
+  margin: 0 auto;
+  z-index:1;
+}
+
+/* SECTION 1: WELCOME */
+.welcome {
+  margin-top:30px;
+  display: grid;
+  grid-template-columns: 1fr 50% 40% 1fr;
+  grid-template-areas: '. text form .';
+  border-bottom: 0.5px solid black;
+  padding-bottom: 80px;
+}
+
+#form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  font-family: Teachers, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+#form input[type=submit] {
+  max-width: 175px;
+  color: white;
+  background: black;
+}
+
+#form input {
+  background-color: #F4F4F4;
+  border: 0;
+  margin: 0 0 20px 20px;
+  border-radius: 5px;
+}
+
+#form label {
+  margin-left: 20px
+}
+
+.welcome p {
+  grid-area: text;
+}
+
+/* SECTION 2: ABOUT */
+#about {
+  display: grid;
+  grid-template-columns: 30vw 50vw 1fr;
+  gap: 10vw;
+  grid-template-areas: 'pic text .';
+  margin-top: 80px;
+  border-bottom: 0.5px solid black
+}
+
+.features-image {
+  grid-area: pic;
+  max-width: 140%;
+  height: auto;
+}
+
+.about-text {
+  grid-area: text;
+  color: #464848;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; 
+  letter-spacing: 0.8px;
+  margin-bottom: 80px;
+}
+
+.about-text p {
+  margin-bottom:25px
+}
+.about-text a {
+  text-decoration: none;
+  color: #C90000;
+  font-family: Teachers;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* FONT INFO */
+.logo {
+  font-family: Aboreto, sans-serif;
+  font-size: 28px;
+}
+
+#nav-bar {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+
+.bold-body {
+  color: #000;
+  font-family: Teachers;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.96px;
+}
+
+.body {
+  color: #464848;
+  text-align: right;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; 
+  letter-spacing: 0.8px;
+}
+
+/* PRICE CARDS */
+/* PRICE CARDS */
+.pricing-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price-card {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 30px;
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+  float: left;
+  width: 100%;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.card-title {
+  top: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  padding: 10px 15px;
+  text-align: right;
+  font-family: Teachers;
+  font-size: 24px;
+}
+
+.card-title h2 {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.description {
+  margin: 0 10px 75px 0;
+  padding: 0;
+  text-align: right;
+  color: #464848;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  font-family: urbanist;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 100%;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.price-card {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 1s, box-shadow 2s;
+}
+
+.price-card:hover {
+  transform: translatex(10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* REVIEW SECTION */
+
+.reviews {
+  background-color: #f8f8f8;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 0 40px 0;
+}
+
+.reviews p {
+  text-align: right;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  max-width: 700px;
+  margin: 20px 5% 20px 0;
+  padding: 20px;
+}
+
+/* VIDEO SECTION */
+.video {
+  position: relative;
+}
+
+iframe {
+  max-width: 50%;
+  aspect-ratio: 2/1;
+  height: auto;
+  z-index: 20;
+  position: absolute;
+  top: 36%;
+  left: 28% 
+}
+
+.gradient-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.gradient {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: radial-gradient(48.66% 48.66% at 50% 50%, #C90000 0%, #FFF 100%);
+/*   animation: gradient 10s ease-in-out infinite; */
+}
+
+/* JOIN */
+
+.join {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px
+}
+
+.join-text {
+  text-align: right;
+  width: 32%;
+  font-size: 19px;
+  line-height: 135%
+}
+
+.join-form input[type=submit] {
+  position: relative;
+  left: 167px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Mobile View (default, up to 767px) */
+/* Already set width: 100% in the base .price-card style */
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .price-card {
+    width: 45%;
+    margin: 0 2% 30px 2%;
+  }
+
+  .price-card:nth-child(3) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+  .price-card {
+    width: 30%;
+    margin: 0 1.5% 30px 1.5%;
+  }
+  
+/*  MOBILE */
+}
+@media (max-width: 768px) {
+  
+  
+  .topbar {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "navlinks";
+  }
+  
+  .logo {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+  }
+  
+  .navlinks {
+    margin: 0;
+    padding-right: 40px;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid black;
+  }  
+  
+  .header-image {
+    margin-top: 20px;
+    
+  }
+  
+  .welcome {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "text"
+      "form";
+  }
+  
+  #form {
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 16px; 
+  }
+  
+  .welcome p {
+    text-align: left;
+    padding: 20px;
+    text-align: justify
+  }
+  
+  .body {
+    font-size: 16px;
+  }
+  
+  .bold-body {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "pic"
+      "text";
+  }
+  
+  .features-image {
+    max-width: 100%;
+    height: auto
+  }
+  
+  .about-text {
+    font-size: 18px
+  }
+  
+  .reviews p {
+    font-size: 13.5px;
+    width: 90%;
+    padding-bottom: 10px
+  }
+  
+  .join {
+    flex-direction: column;
+  }
+ 
+  .join-form {
+    margin: 0 auto;
+  }
+  
+  .join-text {
+    text-align: justify;
+    width: 75%;
+    font-size: 14px;
+    margin: 20px auto;
+    padding-left: 20px;
+  }
+  
+  .join-form input[type=submit] {
+    position: relative;
+    left: 60px
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes gradient{
+  
+  10% {background: radial-gradient(48.66% 48.66% at 50% 50%, #000000 0%, #FFF 100%)}
+  
+  25% {background: radial-gradient(48.66% 48.66% at 50% 50%, #C90000 0%, #FFF 100%)}
+  
+  50% {background: radial-gradient(48.66% 48.66% at 50% 50%, #000000 0%, #FFF 100%)}
+  
+  75% {background: radial-gradient(48.66% 48.66% at 50% 50%, #C90000 0%, #FFF 100%)}
+}
